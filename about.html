@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About SEERAK | SEERAK Property & Facility Management, Coimbatore.">
+  <meta name="theme-color" content="#24563f">
+  <title>About SEERAK | SEERAK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="SEERAK home">
+      <img src="image 4.jpg" alt="SEERAK logo" class="brand-logo">
+      <span><strong>SEERAK</strong><small>PROPERTY &amp; FACILITY MANAGEMENT</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links">
+      <a href="index.html" data-page="home">Home</a>
+      <a href="about.html" data-page="about" class="active">About</a>
+      <a href="services.html" data-page="services">Services</a>
+      <a href="process.html" data-page="process">Our Process</a>
+      <a href="#contact" class="nav-cta">Contact Us</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="page-banner">
+  <div class="container"><span class="eyebrow">GET TO KNOW US</span><h1>About <em>SEERAK</em></h1><p>Reliable care for residential and commercial spaces.</p></div>
+</section>
+<section class="intro section-pad" id="about">
+      <div class="container intro-grid">
+        <div class="intro-images">
+          <div class="intro-photo"><img src="image 3.jpg" alt="Commercial building"></div>
+          <div class="intro-stamp"><span>SEERAK</span><small>CARE • SERVICE • TRUST</small></div>
+        </div>
+        <div class="intro-copy">
+          <span class="eyebrow eyebrow-green">ABOUT SEERAK</span>
+          <h2>We keep your property <em>safe, clean and well maintained.</em></h2>
+          <p>SEERAK provides reliable property and facility management solutions for residential and commercial spaces. We focus on maintenance, service coordination, cleanliness and landscaping to keep properties safe and well maintained.</p>
+          <a class="under-link" href="#contact">Get in touch <span>↗</span></a>
+        </div>
+      </div>
+    </section><section class="serve section-pad">
+      <div class="container serve-grid">
+        <div class="serve-copy">
+          <span class="eyebrow">OUR CLIENTS</span><h2>Who we <em>serve</em></h2>
+          <p>Flexible property and facility support for a range of spaces.</p>
+          <ul class="check-list">
+            <li>Apartments &amp; Residential Communities</li>
+            <li>Individual Houses &amp; Villas</li>
+            <li>Offices &amp; Commercial Buildings</li>
+            <li>Shops &amp; Retail Spaces</li>
+          </ul>
+        </div>
+        <div class="serve-image"><img src="image 5.jpg" alt="Electrical maintenance equipment"><span class="image-caption">MAINTENANCE THAT MATTERS</span></div>
+      </div>
+    </section><section class="why section-pad">
+      <div class="container why-grid">
+        <div class="why-photo"><img src="image 6.jpg" alt="Garden maintenance professional"></div>
+        <div class="why-copy">
+          <span class="eyebrow eyebrow-green">THE SEERAK DIFFERENCE</span><h2>Why choose <em>SEERAK?</em></h2>
+          <div class="benefit-list">
+            <div><span>01</span><p><b>Reliable service coordination</b><small>Well-coordinated support for your property needs.</small></p></div>
+            <div><span>02</span><p><b>Skilled service professionals</b><small>Technicians and service teams for essential maintenance.</small></p></div>
+            <div><span>03</span><p><b>Timely response &amp; support</b><small>Responsive communication and follow-through.</small></p></div>
+            <div><span>04</span><p><b>Affordable maintenance solutions</b><small>Cost-conscious support for residential and commercial care.</small></p></div>
+            <div><span>05</span><p><b>Customer-focused approach</b><small>Service shaped around your property requirements.</small></p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+<section class="contact section-pad" id="contact">
+      <div class="container contact-grid">
+        <div><span class="eyebrow">LET'S TALK</span><h2>Need support for<br><em>your property?</em></h2><p>Contact SEERAK to discuss your property and facility management requirements.</p>
+          <a class="btn btn-light" href="https://wa.me/919750733902" target="_blank" rel="noopener">Chat on WhatsApp <span>↗</span></a>
+        </div>
+        <div class="contact-details">
+          <div><span class="contact-symbol">☎</span><p><small>CALL US</small><a href="tel:+919750733902">9750733902</a></p></div>
+          <div><span class="contact-symbol">✉</span><p><small>EMAIL US</small><a href="mailto:info.seerak@gmail.com">info.seerak@gmail.com</a></p></div>
+          <div><span class="contact-symbol">⌖</span><p><small>LOCATION</small><b>Coimbatore – 641 006</b></p></div>
+          <div><span class="contact-symbol">◎</span><p><small>SERVICE AREAS</small><b>Coimbatore &amp; Surrounding Areas</b></p></div>
+        </div>
+      </div>
+    </section>
+</main>
+<footer><div class="container footer-wrap"><a class="footer-brand" href="#home">SEERAK</a><span>Property &amp; Facility Management</span><span>© <span id="year"></span> SEERAK. All rights reserved.</span></div></footer>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => {
+    nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false');
+  }));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

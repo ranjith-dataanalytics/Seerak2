@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Home | SEERAK Property & Facility Management, Coimbatore.">
+  <meta name="theme-color" content="#24563f">
+  <title>Home | SEERAK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="SEERAK home">
+      <img src="image 4.jpg" alt="SEERAK logo" class="brand-logo">
+      <span><strong>SEERAK</strong><small>PROPERTY &amp; FACILITY MANAGEMENT</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links">
+      <a href="index.html" data-page="home" class="active">Home</a>
+      <a href="about.html" data-page="about">About</a>
+      <a href="services.html" data-page="services">Services</a>
+      <a href="process.html" data-page="process">Our Process</a>
+      <a href="#contact" class="nav-cta">Contact Us</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+      <div class="hero-shape shape-one"></div><div class="hero-shape shape-two"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><i></i> PROPERTY &amp; FACILITY MANAGEMENT</span>
+          <h1>Complete care for<br><em>every property.</em></h1>
+          <p>Reliable property and facility management solutions for residential and commercial spaces in Coimbatore and surrounding areas.</p>
+          <div class="hero-actions">
+            <a class="btn btn-light" href="services.html">Explore Our Services <span>↗</span></a>
+            <a class="text-link" href="https://wa.me/919750733902" target="_blank" rel="noopener">Talk to our team <span>→</span></a>
+          </div>
+          <div class="hero-note"><span class="note-dot"></span> Responsive support. Reliable maintenance. Better spaces.</div>
+        </div>
+        <div class="hero-visual">
+          <div class="photo-card photo-main"><img src="image 1.jpg" alt="Modern residential apartment building"></div>
+          <div class="photo-card photo-small"><img src="image 2.jpg" alt="Professional housekeeping team"></div>
+          <div class="floating-tag"><span class="tag-icon">✓</span><span><b>Complete care</b><small>Residential &amp; commercial</small></span></div>
+        </div>
+      </div>
+      <div class="hero-bottom container"><span>01 / 04</span><span class="hero-line"></span><span>COIMBATORE, TAMIL NADU</span></div>
+    </section>
+<section class="home-preview section-pad">
+  <div class="container">
+    <div class="section-heading">
+      <div><span class="eyebrow eyebrow-green">WHAT WE DO</span><h2>Our <em>Services</em></h2></div>
+      <p>Dependable support for the day-to-day needs of your property.</p>
+    </div>
+    <div class="service-grid compact-grid">
+      <article class="service-card"><div class="service-number">01</div><div class="service-icon">⌂</div><h3>Property Management</h3><p>Organised property care and maintenance coordination.</p></article>
+      <article class="service-card"><div class="service-number">02</div><div class="service-icon">▦</div><h3>Facility Management</h3><p>Reliable support to keep facilities running smoothly.</p></article>
+      <article class="service-card"><div class="service-number">03</div><div class="service-icon">⌁</div><h3>Electrical &amp; Plumbing</h3><p>Maintenance support for essential services.</p></article>
+    </div>
+    <a class="under-link" href="services.html">View all services <span>↗</span></a>
+  </div>
+</section>
+
+<section class="contact section-pad" id="contact">
+      <div class="container contact-grid">
+        <div><span class="eyebrow">LET'S TALK</span><h2>Need support for<br><em>your property?</em></h2><p>Contact SEERAK to discuss your property and facility management requirements.</p>
+          <a class="btn btn-light" href="https://wa.me/919750733902" target="_blank" rel="noopener">Chat on WhatsApp <span>↗</span></a>
+        </div>
+        <div class="contact-details">
+          <div><span class="contact-symbol">☎</span><p><small>CALL US</small><a href="tel:+919750733902">9750733902</a></p></div>
+          <div><span class="contact-symbol">✉</span><p><small>EMAIL US</small><a href="mailto:info.seerak@gmail.com">info.seerak@gmail.com</a></p></div>
+          <div><span class="contact-symbol">⌖</span><p><small>LOCATION</small><b>Coimbatore – 641 006</b></p></div>
+          <div><span class="contact-symbol">◎</span><p><small>SERVICE AREAS</small><b>Coimbatore &amp; Surrounding Areas</b></p></div>
+        </div>
+      </div>
+    </section>
+</main>
+<footer><div class="container footer-wrap"><a class="footer-brand" href="#home">SEERAK</a><span>Property &amp; Facility Management</span><span>© <span id="year"></span> SEERAK. All rights reserved.</span></div></footer>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => {
+    nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false');
+  }));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

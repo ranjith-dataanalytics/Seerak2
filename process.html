@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Our Process | SEERAK Property & Facility Management, Coimbatore.">
+  <meta name="theme-color" content="#24563f">
+  <title>Our Process | SEERAK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="SEERAK home">
+      <img src="image 4.jpg" alt="SEERAK logo" class="brand-logo">
+      <span><strong>SEERAK</strong><small>PROPERTY &amp; FACILITY MANAGEMENT</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links">
+      <a href="index.html" data-page="home">Home</a>
+      <a href="about.html" data-page="about">About</a>
+      <a href="services.html" data-page="services">Services</a>
+      <a href="process.html" data-page="process" class="active">Our Process</a>
+      <a href="#contact" class="nav-cta">Contact Us</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="page-banner">
+  <div class="container"><span class="eyebrow">HOW WE WORK</span><h1>Our Work <em>Process</em></h1><p>A clear, coordinated approach from your first request to completion.</p></div>
+</section>
+<section class="process section-pad" id="process">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow eyebrow-green">HOW WE WORK</span><h2>Our work <em>process</em></h2></div>
+          <p>A clear, coordinated approach from your first request to completion.</p>
+        </div>
+        <div class="process-grid">
+          <div class="process-step"><span>01</span><div class="step-icon">✉</div><h3>Customer Request</h3><p>Understand your requirement.</p></div>
+          <div class="process-step"><span>02</span><div class="step-icon">⌖</div><h3>Site Inspection</h3><p>Review the site and work needed.</p></div>
+          <div class="process-step"><span>03</span><div class="step-icon">▤</div><h3>Service Planning</h3><p>Plan the right service response.</p></div>
+          <div class="process-step"><span>04</span><div class="step-icon">⚙</div><h3>Technician Coordination</h3><p>Coordinate the required professionals.</p></div>
+          <div class="process-step"><span>05</span><div class="step-icon">✓</div><h3>Completion &amp; Follow-up</h3><p>Complete the work and follow up.</p></div>
+        </div>
+      </div>
+    </section><section class="facilities section-pad">
+      <div class="container facilities-grid">
+        <div class="facilities-copy">
+          <span class="eyebrow">OUR COMMITMENT</span><h2>Special <em>facilities</em></h2>
+          <ul class="facility-list">
+            <li>Timely Service</li><li>Skilled Technicians</li><li>Reliable Support</li>
+            <li>Cost-Effective Solutions</li><li>Clean &amp; Green Spaces</li>
+          </ul>
+        </div>
+        <div class="facilities-photo"><img src="image 7.jpg" alt="Plumbing tools and maintenance equipment"></div>
+        <div class="facilities-note"><span class="big-quote">“</span><h3>Better maintained spaces. A better everyday experience.</h3><p>From routine upkeep to service coordination, we help you care for your property.</p></div>
+      </div>
+    </section>
+<section class="contact section-pad" id="contact">
+      <div class="container contact-grid">
+        <div><span class="eyebrow">LET'S TALK</span><h2>Need support for<br><em>your property?</em></h2><p>Contact SEERAK to discuss your property and facility management requirements.</p>
+          <a class="btn btn-light" href="https://wa.me/919750733902" target="_blank" rel="noopener">Chat on WhatsApp <span>↗</span></a>
+        </div>
+        <div class="contact-details">
+          <div><span class="contact-symbol">☎</span><p><small>CALL US</small><a href="tel:+919750733902">9750733902</a></p></div>
+          <div><span class="contact-symbol">✉</span><p><small>EMAIL US</small><a href="mailto:info.seerak@gmail.com">info.seerak@gmail.com</a></p></div>
+          <div><span class="contact-symbol">⌖</span><p><small>LOCATION</small><b>Coimbatore – 641 006</b></p></div>
+          <div><span class="contact-symbol">◎</span><p><small>SERVICE AREAS</small><b>Coimbatore &amp; Surrounding Areas</b></p></div>
+        </div>
+      </div>
+    </section>
+</main>
+<footer><div class="container footer-wrap"><a class="footer-brand" href="#home">SEERAK</a><span>Property &amp; Facility Management</span><span>© <span id="year"></span> SEERAK. All rights reserved.</span></div></footer>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => {
+    nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false');
+  }));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
